@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51294/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51294/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51294/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Biblioteca" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_CadastrarAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExcluirAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExcluirAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarAnuncio_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarAnuncio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarAnuncio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarAnuncioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarAnuncio_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarAnuncio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarAnuncio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarAnuncioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarAnuncio_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarAnuncio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarAnuncio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarAnuncioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncioDatas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncioDatas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncioDatas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncioDatasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarAnuncio_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarAnuncio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarAnuncio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarAnuncioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncioParceiro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncioParceiro" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarAnuncioParceiro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAnuncioParceiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CadastrarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuscarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AtualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarParceiros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarParceiros" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListarParceiros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarParceirosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="CadastrarAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CadastrarAnimal" message="tns:IService1_CadastrarAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CadastrarAnimalResponse" message="tns:IService1_CadastrarAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ExcluirAnimal" message="tns:IService1_ExcluirAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ExcluirAnimalResponse" message="tns:IService1_ExcluirAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarAnimal" message="tns:IService1_ListarAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarAnimalResponse" message="tns:IService1_ListarAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuscarAnimal" message="tns:IService1_BuscarAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuscarAnimalResponse" message="tns:IService1_BuscarAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AtualizarAnimal" message="tns:IService1_AtualizarAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AtualizarAnimalResponse" message="tns:IService1_AtualizarAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarAnuncio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CadastrarAnuncio" message="tns:IService1_CadastrarAnuncio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CadastrarAnuncioResponse" message="tns:IService1_CadastrarAnuncio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarAnuncio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletarAnuncio" message="tns:IService1_DeletarAnuncio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletarAnuncioResponse" message="tns:IService1_DeletarAnuncio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarAnuncio" message="tns:IService1_ListarAnuncio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarAnuncioResponse" message="tns:IService1_ListarAnuncio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarAnuncio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuscarAnuncio" message="tns:IService1_BuscarAnuncio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuscarAnuncioResponse" message="tns:IService1_BuscarAnuncio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncioDatas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarAnuncioDatas" message="tns:IService1_ListarAnuncioDatas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarAnuncioDatasResponse" message="tns:IService1_ListarAnuncioDatas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAnuncio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AtualizarAnuncio" message="tns:IService1_AtualizarAnuncio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AtualizarAnuncioResponse" message="tns:IService1_AtualizarAnuncio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncioParceiro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarAnuncioParceiro" message="tns:IService1_ListarAnuncioParceiro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarAnuncioParceiroResponse" message="tns:IService1_ListarAnuncioParceiro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CadastrarTipo" message="tns:IService1_CadastrarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CadastrarTipoResponse" message="tns:IService1_CadastrarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletarTipo" message="tns:IService1_DeletarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletarTipoResponse" message="tns:IService1_DeletarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarTipo" message="tns:IService1_ListarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarTipoResponse" message="tns:IService1_ListarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuscarTipo" message="tns:IService1_BuscarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuscarTipoResponse" message="tns:IService1_BuscarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AtualizarTipo" message="tns:IService1_AtualizarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AtualizarTipoResponse" message="tns:IService1_AtualizarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CadastrarUsuario" message="tns:IService1_CadastrarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CadastrarUsuarioResponse" message="tns:IService1_CadastrarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletarUsuario" message="tns:IService1_DeletarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletarUsuarioResponse" message="tns:IService1_DeletarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarUsuario" message="tns:IService1_ListarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarUsuarioResponse" message="tns:IService1_ListarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuscarUsuario" message="tns:IService1_BuscarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuscarUsuarioResponse" message="tns:IService1_BuscarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AtualizarUsuario" message="tns:IService1_AtualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AtualizarUsuarioResponse" message="tns:IService1_AtualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarParceiros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListarParceiros" message="tns:IService1_ListarParceiros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListarParceirosResponse" message="tns:IService1_ListarParceiros_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadastrarAnimal">
+      <soap:operation soapAction="http://tempuri.org/IService1/CadastrarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirAnimal">
+      <soap:operation soapAction="http://tempuri.org/IService1/ExcluirAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnimal">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarAnimal">
+      <soap:operation soapAction="http://tempuri.org/IService1/BuscarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAnimal">
+      <soap:operation soapAction="http://tempuri.org/IService1/AtualizarAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarAnuncio">
+      <soap:operation soapAction="http://tempuri.org/IService1/CadastrarAnuncio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarAnuncio">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletarAnuncio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncio">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarAnuncio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarAnuncio">
+      <soap:operation soapAction="http://tempuri.org/IService1/BuscarAnuncio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncioDatas">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarAnuncioDatas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAnuncio">
+      <soap:operation soapAction="http://tempuri.org/IService1/AtualizarAnuncio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAnuncioParceiro">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarAnuncioParceiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarTipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/CadastrarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarTipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/BuscarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarTipo">
+      <soap:operation soapAction="http://tempuri.org/IService1/AtualizarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/CadastrarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/AtualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarParceiros">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListarParceiros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:51294/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
