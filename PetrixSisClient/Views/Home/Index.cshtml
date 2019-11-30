@@ -1,18 +1,33 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+    
 <div class="jumbotron">
     <h1>Bem-vindo ao PETRIX</h1>
     <p class="lead">Clique no botão abaixo para se cadastrar</p>
     <p><a href="https://asp.net" class="btn btn-success btn-lg">Cadastro &raquo;</a></p>
 </div>
+<div class="card">
+    <div class="dog"></div>
+</div>
+  
 
-<div class="dog"></div>
+
 
 <style>
-    dog{
-        background-image: url(../../Downloads/dog.jpeg);
-        margin: 0;
+    .dog {
+        background-image: url(../img/dog.png);
+        background-position:center;   
+        height: 360px; 
+        width: 100%; 
+        padding: 0;
+        background-repeat: initial; 
+    }
+    .jumbotron {
+        margin-bottom: 0px;
+    }
+    .body-content {
+        width: 100%;
+        padding: 0;
     }
 </style>
