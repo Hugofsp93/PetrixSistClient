@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>PETRIX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,24 +17,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("PETRIX", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="float: right;">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Animal", "Index", "Animals")</li>
+                    <li>@Html.ActionLink("Tipo", "Index", "Tipoes")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="width: 100%; padding: 0;">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer style="text-align: center;">
+            <p>&copy; @DateTime.Now.Year - PETRIX</p>
         </footer>
     </div>
 
@@ -42,3 +41,21 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<style>
+    .zmdi {
+        font-size: 25px;
+    }
+    a{
+        color: black;
+    }
+    .navbar-inverse{
+        background-color: seagreen;
+        border-color: seagreen;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+        color: white;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+    }
+</style>

@@ -42,8 +42,6 @@ namespace PetrixSisClient.Controllers
         }
 
         // POST: Animals/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id_animal,ds_animal")] Animal animal)
@@ -78,8 +76,6 @@ namespace PetrixSisClient.Controllers
         }
 
         // POST: Animals/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id_animal,ds_animal")] Animal animal)

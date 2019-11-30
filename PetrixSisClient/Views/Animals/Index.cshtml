@@ -1,33 +1,43 @@
 ﻿@model IEnumerable<PetrixSisClient.Models.Animal>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Animais";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ds_animal)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ds_animal)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_animal }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_animal }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_animal })
-        </td>
-    </tr>
-}
-
-</table>
+    
+    <div class="card">
+        <div class="card-header" style="display: inline-flex;">
+            <h2>Lista de Animais</h2>
+            <a href='@Url.Action("Create","Animals")' style="margin-top: 25px; margin-left: 35px;"><i class="zmdi zmdi-plus"></i></a>
+        </div>
+        <br />
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ds_animal)</td>
+                        <td>
+                            <a href='@Url.Action("Details", new { id = item.id_animal })' ><span class="zmdi zmdi-search"></span></a>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("Edit", new { id = item.id_animal })'><span class="zmdi zmdi-edit"></span></a>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("Delete", new { id = item.id_animal })'><span class="zmdi zmdi-delete"></span></a>
+                        </td>
+                    </tr>    
+                    }
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>

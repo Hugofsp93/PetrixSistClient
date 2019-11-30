@@ -742,6 +742,7 @@ namespace PetrixSisClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        [Key]
         public int id_tipo {
             get {
                 return this.id_tipoField;

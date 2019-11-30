@@ -76,3 +76,4 @@ C:\Users\victor\source\repos\PetrixSisClient\PetrixSisClient\bin\EntityFramework
 C:\Users\victor\source\repos\PetrixSisClient\PetrixSisClient\bin\EntityFramework.SqlServer.dll
 C:\Users\victor\source\repos\PetrixSisClient\PetrixSisClient\bin\EntityFramework.xml
 C:\Users\victor\source\repos\PetrixSisClient\PetrixSisClient\bin\EntityFramework.SqlServer.xml
+C:\Users\victor\source\repos\PetrixSisClient\PetrixSisClient\obj\Debug\PetrixSisClient.csprojAssemblyReference.cache

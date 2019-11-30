@@ -1,0 +1,23 @@
+﻿@model PetrixSisClient.Models.Tipo
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h3>Detalhes do Tipo</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Descrição</dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_tipo }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
