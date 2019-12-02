@@ -134,6 +134,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AnimalsController.cs" />
+    <Compile Include="Controllers\AnunciosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TipoesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -141,6 +142,8 @@
     </Compile>
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\AnimalContext.cs" />
+    <Compile Include="Models\Anuncio.cs" />
+    <Compile Include="Models\AnuncioContext.cs" />
     <Compile Include="Models\Tipo.cs" />
     <Compile Include="Models\TipoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +222,11 @@
     <Content Include="Views\Tipoes\Details.cshtml" />
     <Content Include="Views\Tipoes\Edit.cshtml" />
     <Content Include="Views\Tipoes\Index.cshtml" />
+    <Content Include="Views\Anuncios\Create.cshtml" />
+    <Content Include="Views\Anuncios\Delete.cshtml" />
+    <Content Include="Views\Anuncios\Details.cshtml" />
+    <Content Include="Views\Anuncios\Edit.cshtml" />
+    <Content Include="Views\Anuncios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -280,6 +280,7 @@ namespace PetrixSisClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        [Key]
         public int id_anun {
             get {
                 return this.id_anunField;

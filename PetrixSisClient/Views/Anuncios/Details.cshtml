@@ -1,0 +1,41 @@
+﻿@model PetrixSisClient.Models.Anuncio
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h3>Detalhes do Anuncio</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>E-mail</dt>
+        <dd>@Html.DisplayFor(model => model.email_anun)</dd>
+
+        <dt>Descrição</dt>
+        <dd>@Html.DisplayFor(model => model.conteudo_anun)</dd>
+
+        <dt>Telefone</dt>
+        <dd>@Html.DisplayFor(model => model.telefone_anun)</dd>
+
+        <dt>Titulo do Anuncio</dt>
+        <dd>@Html.DisplayFor(model => model.titulo_anun)</dd>
+
+        <dt>Data do anuncio</dt>
+        <dd>@Html.DisplayFor(model => model.data_anun)</dd>
+
+        <dt>Usuario</dt>
+        <dd>@Html.DisplayFor(model => model.fk_Usuario_id_user)</dd>
+
+        <dt>Animal</dt>
+        <dd>@Html.DisplayFor(model => model.fk_Animal_id_animal)</dd>
+
+        <dt>Localidade</dt>
+        <dd>@Html.DisplayFor(model => model.fk_Localidade_id_local)</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_anun }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

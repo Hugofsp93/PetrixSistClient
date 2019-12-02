@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PetrixSisClient.Models.Anuncio>
+
+@{
+    ViewBag.Title = "Anuncios";
+}
+    <div class="card">
+        <div class="card-header" style="display: inline-flex;">
+            <h2>Lista de Anuncios</h2>
+            <a href='@Url.Action("Create","Anuncios")' style="margin-top: 25px; margin-left: 35px;"><i class="zmdi zmdi-plus"></i></a>
+        </div>
+        <br />
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>E-mail</th>
+                        <th>Descrição</th>
+                        <th>Telefone</th>
+                        <th>Titulo do Anuncio</th>
+                        <th>Data do anuncio</th>
+                        <th>Usuario</th>
+                        <th>Animal</th>
+                        <th>Localidade</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.email_anun)</td>
+                        <td>@Html.DisplayFor(modelItem => item.conteudo_anun)</td>
+                        <td>@Html.DisplayFor(modelItem => item.telefone_anun)</td>
+                        <td>@Html.DisplayFor(modelItem => item.titulo_anun)</td>
+                        <td>@Html.DisplayFor(modelItem => item.data_anun)</td>
+                        <td>@Html.DisplayFor(modelItem => item.fk_Usuario_id_user)</td>
+                        <td>@Html.DisplayFor(modelItem => item.fk_Animal_id_animal)</td>
+                        <td>@Html.DisplayFor(modelItem => item.fk_Localidade_id_local)</td>
+                        <td>
+                            <a href='@Url.Action("Details", new { id = item.id_anun })'><span class="zmdi zmdi-search"></span></a>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("Edit", new { id = item.id_anun })'><span class="zmdi zmdi-edit"></span></a>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("Delete", new { id = item.id_anun })'><span class="zmdi zmdi-delete"></span></a>
+                        </td>
+                    </tr>
+
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
