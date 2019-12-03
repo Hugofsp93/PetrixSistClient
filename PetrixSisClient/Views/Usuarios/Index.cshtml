@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PetrixSisClient.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-header" style="display: inline-flex;">
+      <h2>Usuarios</h2>
+      <a href='@Url.Action("Create","Usuarios")' style="margin-top: 25px; margin-left: 35px;"><i class="zmdi zmdi-plus"></i></a>
+    </div>
+    <br />
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>E-mail</th>
+            <th>Endereco</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>CNPJ</th>
+            <th>Site</th>
+            <th>Tipo</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.email_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.endereco_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.nome_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.cfp_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.cnpj_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.site_user)</td>
+        <td>@Html.DisplayFor(modelItem => item.fk_Tipo_id_tipo)</td>
+        <td><a href='@Url.Action("Details", new { id=item.id_user })' ><span class="zmdi zmdi-search"></span></a></td>
+        <td><a href='@Url.Action("Edit", new { id=item.id_user })'><span class="zmdi zmdi-edit"></span></a></td>
+        <td><a href='@Url.Action("Delete", new { id=item.id_user })'><span class="zmdi zmdi-delete"></span></a></td>
+    </tr>
+}
+      </tbody>
+    </table>
+  </div>
+</div>

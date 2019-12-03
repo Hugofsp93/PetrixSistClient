@@ -1,0 +1,38 @@
+﻿@model PetrixSisClient.Models.Usuario
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h3>Details</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.email_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.endereco_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.nome_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.cfp_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.cnpj_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.site_user)</dd>
+
+        <dt>"padrao"</dt>
+        <dd>@Html.DisplayFor(model => model.fk_Tipo_id_tipo)</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id_user }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

@@ -137,6 +137,7 @@
     <Compile Include="Controllers\AnunciosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TipoesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +147,8 @@
     <Compile Include="Models\AnuncioContext.cs" />
     <Compile Include="Models\Tipo.cs" />
     <Compile Include="Models\TipoContext.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuarioContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +230,11 @@
     <Content Include="Views\Anuncios\Details.cshtml" />
     <Content Include="Views\Anuncios\Edit.cshtml" />
     <Content Include="Views\Anuncios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
